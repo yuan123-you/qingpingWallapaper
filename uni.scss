@@ -1,0 +1,49 @@
+$brand-primary: #28b389;
+$brand-primary-light: #40c79c;
+$brand-gradient: linear-gradient(135deg, $brand-primary, $brand-primary-light);
+
+$text-primary: #333;
+$text-secondary: #666;
+$text-tertiary: #999;
+$text-disabled: #ccc;
+
+$screen-xs: 320px;
+$screen-sm: 375px;
+$screen-md: 414px;
+$gap-base: 10rpx;
+
+$border-radius-base: 8rpx;
+$border-radius-lg: 16rpx;
+$border-radius-sm: 4rpx;
+
+$box-shadow-base: 0 2rpx 8rpx rgba(0, 0, 0, 0.08);
+$box-shadow-lg: 0 4rpx 16rpx rgba(0, 0, 0, 0.12);
+
+$page-bg: #F8F9FA;
+$card-bg: #FFFFFF;
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin text-ellipsis-multiline($lines: 2) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
+}
