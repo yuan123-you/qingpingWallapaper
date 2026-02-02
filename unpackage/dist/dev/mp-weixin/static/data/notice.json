@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "欢迎使用轻屏壁纸",
+    "type": "system",
+    "content": "欢迎来到轻屏壁纸，这里有海量精美壁纸等你来发现！",
+    "status": 1,
+    "create_time": 1704067200
+  },
+  {
+    "id": 2,
+    "title": "功能更新",
+    "type": "update",
+    "content": "新增了更多分类和壁纸，持续更新中...",
+    "status": 1,
+    "create_time": 1704153600
+  },
+  {
+    "id": 3,
+    "title": "温馨提示",
+    "type": "activity",
+    "content": "点击壁纸可预览大图，点击下载按钮即可保存到本地",
+    "status": 1,
+    "create_time": 1704240000
+  }
+]

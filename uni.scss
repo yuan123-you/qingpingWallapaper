@@ -1,0 +1,77 @@
+// 颜色系统
+$brand-color: #28b389;
+$brand-color-light: #e9f7f3;
+$brand-gradient: linear-gradient(135deg, #28b389 0%, #40c79c 100%);
+$accent-color: #ff6b6b;
+$secondary-color: #4facfe;
+
+// 文字颜色
+$text-main: #2c3e50;
+$text-sub: #7f8c8d;
+$text-grey: #bdc3c7;
+$text-white: #ffffff;
+
+// 背景颜色
+$bg-color: #f8f9fa;
+$bg-glass: rgba(255, 255, 255, 0.85);
+$bg-dark-glass: rgba(0, 0, 0, 0.6);
+
+// 阴影与圆角
+$shadow-sm: 0 4rpx 12rpx rgba(0, 0, 0, 0.05);
+$shadow-md: 0 8rpx 24rpx rgba(0, 0, 0, 0.08);
+$shadow-lg: 0 16rpx 48rpx rgba(0, 0, 0, 0.12);
+$radius-sm: 12rpx;
+$radius-md: 24rpx;
+$radius-lg: 40rpx;
+$radius-circle: 1000rpx;
+
+// 磨砂玻璃混入
+@mixin glass-effect {
+  background: $bg-glass;
+  backdrop-filter: blur(20rpx);
+  -webkit-backdrop-filter: blur(20rpx);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+// 弹性布局混入
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// 文字溢出混入
+@mixin text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin text-ellipsis-2 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+// 动画
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20rpx);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}

@@ -1,151 +1,75 @@
-# 轻屏壁纸 V2.0
+# 轻屏壁纸 (LightScreen) V3.0
 
-基于UniApp和Cloudflare Wrangler的跨平台壁纸应用
+一个基于 **UniApp + Vue 3** 构建的高颜值、纯前端驱动高清壁纸探索小程序。
 
-## 项目结构
+## 🌟 项目概述
 
-```
-qingpingWallapaper/
-├── frontend/          # UniApp前端项目（微信小程序）
-│   ├── api/         # API接口
-│   ├── components/  # 组件
-│   ├── pages/       # 页面
-│   ├── stores/      # 状态管理
-│   ├── utils/       # 工具函数
-│   ├── static/      # 静态资源
-│   ├── App.vue      # 应用入口
-│   ├── main.js      # 主文件
-│   ├── manifest.json # 应用配置
-│   ├── pages.json   # 页面配置
-│   ├── uni.scss     # 全局样式
-│   ├── package.json # 依赖配置
-│   └── vite.config.js # Vite配置
-├── backend/           # Vue3管理后台
-│   ├── src/
-│   │   ├── api/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   ├── router/
-│   │   ├── stores/
-│   │   ├── utils/
-│   │   ├── App.vue
-│   │   └── main.js
-│   ├── index.html
-│   ├── package.json
-│   └── vite.config.js
-├── wrangler/          # Cloudflare Worker API
-│   ├── d1/
-│   │   ├── add_admin.sql
-│   │   └── init.sql
-│   └── src/
-│       ├── routes/
-│       ├── index.js
-│       └── index-test.js
-├── API.md           # API文档
-├── README.md        # 项目说明
-└── wrangler.toml    # Wrangler配置
-```
+**轻屏壁纸** 是一款主打沉浸式美学的高清壁纸应用。采用现代化的 **磨砂玻璃 (Glassmorphism)** 设计语言，配合流畅的入场动画及高斯模糊特效，为用户提供极为精致的视觉体验。项目完全由前端驱动，数据通过本地 Mock 管理，支持收藏、历史记录、下载同步等完整功能。
 
-## 技术栈
+## ✨ 项目特点
 
-### 前端（frontend/）
-- **框架**: UniApp + Vue 3
-- **状态管理**: Pinia
-- **样式**: SCSS
+- **纯前端驱动**：无需任何后端 API、服务器或数据库。
+- **本地持久化**：深度结合 UniApp 原生存储与 Pinia，支持离线收藏、浏览历史及下载记录管理。
+- **沉浸式美学**：全局采用磨砂玻璃设计，支持动态导航栏跟随页面滚动进行透明度及模糊度渐变。
+- **高性能加载**：基于本地数据索引及 Pexels 图片动态优化，检索速度快，加载体验佳。
+
+## 🛠️ 技术栈
+
+- **核心框架**: UniApp (Vue 3 Composition API)
+- **状态管理**: Pinia (集成持久化存储)
+- **样式处理**: SCSS (自定义现代设计系统)
 - **构建工具**: Vite
+- **UI 组件**: Uni-UI + 自定义高阶组件
 
-### 后端（backend/）
-- **框架**: Vue 3 + Vite
-- **状态管理**: Pinia
-- **路由**: Vue Router
-- **UI组件**: Element Plus
+## 📂 目录结构与功能说明
 
-### API（wrangler/）
-- **运行时**: Cloudflare Workers
-- **数据库**: D1 (SQLite)
-- **部署**: Wrangler CLI
-
-## 开发命令
-
-### 前端开发（UniApp微信小程序）
-
-```bash
-cd frontend
-npm install
-npm run dev:mp-weixin    # 微信小程序开发
-npm run build:mp-weixin  # 微信小程序构建
-npm run dev:h5          # H5开发
-npm run build:h5         # H5构建
+```text
+├── api/                 # 数据中心
+│   ├── mockData.js      # 核心数据池：壁纸资源、分类映射、轮播图及公告
+│   └── user/            # 用户业务：模拟收藏、下载、历史记录逻辑
+├── components/          # 公用组件
+│   ├── common-nav-bar/  # 自定义高级导航栏 (支持毛玻璃及动态渐变)
+│   ├── rating-star/     # 优雅的五星评分组件
+│   └── wallpaper-card/  # 统一样式的壁纸展示卡片
+├── pages/               # 视图页面
+│   ├── index/           # 首页 (轮播/公告/精选推荐)
+│   ├── classify/        # 分类中心 (行业领先的分类视觉导向)
+│   ├── wallpaper/       # 壁纸列表 (瀑布流布局)
+│   ├── preview/         # 详情预览 (全屏沉浸预览/评分/收藏/下载)
+│   ├── search/          # 搜索中心
+│   ├── login/           # 模拟登录页
+│   ├── my/              # 个人中心 (历史/收藏/下载记录)
+│   └── notice/          # 公告系统 (列表及详情)
+├── stores/              # Pinia 状态仓库 (处理全局持久化数据)
+├── utils/               # 工具函数 (请求封装、通用辅助函数)
+├── static/              # 静态资源 (图标、占位图)
+├── App.vue              # 应用入口 (生命周期监听与全局样式)
+├── main.js              # 初始化入口
+├── manifest.json        # 应用平台配置
+├── pages.json           # 页面路由及全局 UI 配置
+├── uni.scss             # 全局样式规范 (品牌色/圆角/阴影变量)
+└── vite.config.js       # 构建及编译配置
 ```
 
-### 后端开发（管理后台）
+## 🚀 快速开始
 
-```bash
-cd backend
-npm install
-npm run dev             # 开发模式
-npm run build           # 生产构建
-npm run preview         # 预览构建结果
-```
+1. **环境准备**
+   确保已安装 HBuilderX 或 VSCode + Node.js 环境。
 
-### API部署（Cloudflare Worker）
+2. **安装依赖**
+   ```bash
+   npm install
+   ```
 
-```bash
-cd wrangler
-npm install -g wrangler
-wrangler deploy        # 部署到Cloudflare
-wrangler d1 execute DB --file=./d1/init.sql  # 初始化数据库
-```
+3. **运行项目**
+   - **H5 预览**: `npm run dev:h5`
+   - **微信小程序**: 通过 `npm run dev:mp-weixin` 编译后在开发者工具中打开 `unpackage/dist/dev/mp-weixin`
 
-## 主要功能
+## 📝 注意事项
 
-### 前端功能
-- 首页展示（轮播图、推荐、分类）
-- 分类浏览
-- 壁纸预览
-- 搜索功能
-- 用户收藏
-- 浏览历史
-- 下载保存
+- 本项目为纯前端演示版本，不包含 `admin` 管理后台。
+- 所有壁纸及文案数据均在 `api/mockData.js` 中维护，可直接手动扩充。
 
-### 后台功能
-- 管理员登录
-- 壁纸管理（增删改查）
-- 分类管理
-- 轮播图管理
-- 公告管理
-- 数据统计
-
-### API功能
-- 用户端API
-- 管理端API
-- 数据库操作
-- 图片上传（Cloudflare R2）
-
-## 环境要求
-
-- Node.js >= 16.x
-- npm >= 8.x
-- 微信开发者工具（用于小程序开发）
-- Wrangler CLI（用于API部署）
-
-## 注意事项
-
-1. **前端开发**：使用HBuilderX或VS Code + UniApp插件
-2. **后端开发**：使用VS Code + Volar插件
-3. **API部署**：需要Cloudflare账号和Wrangler CLI
-4. **数据库**：使用Cloudflare D1，首次部署需要执行初始化SQL
-
-## 项目特点
-
-- ✅ 前后端完全分离
-- ✅ 支持多端发布（微信小程序、H5、App）
-- ✅ 使用Pinia进行状态管理
-- ✅ API使用Cloudflare Workers，无需服务器
-- ✅ 数据库使用Cloudflare D1，免费额度充足
-- ✅ 图片存储使用Cloudflare R2，成本低廉
-- ✅ 响应式设计，适配各种屏幕尺寸
-
-## 许可证
+## 📄 许可证
 
 MIT License

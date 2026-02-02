@@ -1,0 +1,54 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/login/login",
+    "pages/classify/classify",
+    "pages/preview/preview",
+    "pages/my/my",
+    "pages/search/search",
+    "pages/wallpaper/list",
+    "pages/my/history",
+    "pages/my/favorites",
+    "pages/my/downloads"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "轻屏壁纸",
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "backgroundColor": "#F8F9FA"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#28b389",
+    "backgroundColor": "#FFFFFF",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "static/tabBar/home.png",
+        "selectedIconPath": "static/tabBar/home-active.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/classify/classify",
+        "iconPath": "static/tabBar/classify.png",
+        "selectedIconPath": "static/tabBar/classify-active.png",
+        "text": "分类"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "iconPath": "static/tabBar/my.png",
+        "selectedIconPath": "static/tabBar/my-active.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "permission": {
+    "scope.writePhotosAlbum": {
+      "desc": "保存壁纸到相册需要您的授权"
+    }
+  },
+  "requiredPrivateInfos": [],
+  "lazyCodeLoading": "requiredComponents",
+  "usingComponents": {}
+}

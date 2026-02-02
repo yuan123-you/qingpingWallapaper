@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "name": "风景壁纸",
+    "cover_url": "https://picsum.photos/400/300?random=11",
+    "cover_base64": "",
+    "desc": "各种精美的风景壁纸，包含自然风光、山川美景等",
+    "sort": 1,
+    "wall_count": 100,
+    "update_time": 1704067200
+  },
+  {
+    "id": 2,
+    "name": "动漫壁纸",
+    "cover_url": "https://picsum.photos/400/300?random=12",
+    "cover_base64": "",
+    "desc": "各种精美的动漫壁纸，二次元风格",
+    "sort": 2,
+    "wall_count": 80,
+    "update_time": 1704067200
+  },
+  {
+    "id": 3,
+    "name": "抽象壁纸",
+    "cover_url": "https://picsum.photos/400/300?random=13",
+    "cover_base64": "",
+    "desc": "各种精美的抽象壁纸，艺术风格",
+    "sort": 3,
+    "wall_count": 60,
+    "update_time": 1704067200
+  },
+  {
+    "id": 4,
+    "name": "星空壁纸",
+    "cover_url": "https://picsum.photos/400/300?random=14",
+    "cover_base64": "",
+    "desc": "璀璨的星空银河壁纸",
+    "sort": 4,
+    "wall_count": 50,
+    "update_time": 1704067200
+  },
+  {
+    "id": 5,
+    "name": "简约壁纸",
+    "cover_url": "https://picsum.photos/400/300?random=15",
+    "cover_base64": "",
+    "desc": "简约风格的高清壁纸",
+    "sort": 5,
+    "wall_count": 40,
+    "update_time": 1704067200
+  }
+]

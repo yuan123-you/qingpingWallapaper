@@ -1,9 +1,0 @@
-page {
-  background-color: #F8F9FA;
-  font-size: 28rpx;
-  color: #333;
-}
-.page-bg {
-  background: linear-gradient(to bottom, transparent, #f8f9fa 300rpx), linear-gradient(to right, #e8f5e9, #f5fafe);
-  min-height: 100vh;
-}page{--status-bar-height:25px;--top-window-height:0px;--window-top:0px;--window-bottom:0px;--window-left:0px;--window-right:0px;--window-magin:0px}[data-c-h="true"]{display: none !important;}

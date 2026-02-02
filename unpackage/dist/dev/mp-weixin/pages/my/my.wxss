@@ -1,0 +1,254 @@
+@keyframes fadeInUp-2f1ef635 {
+from {
+    opacity: 0;
+    transform: translateY(20rpx);
+}
+to {
+    opacity: 1;
+    transform: translateY(0);
+}
+}
+.fade-in-up.data-v-2f1ef635 {
+  animation: fadeInUp-2f1ef635 0.6s ease-out forwards;
+}
+.container.data-v-2f1ef635 {
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+.profile-header.data-v-2f1ef635 {
+  height: 480rpx;
+  background: linear-gradient(135deg, #121212 0%, #2a2a2a 100%);
+  position: relative;
+}
+.profile-header .header-inner.data-v-2f1ef635 {
+  padding: 30rpx 40rpx;
+}
+.profile-header .header-inner .user-main.data-v-2f1ef635 {
+  display: flex;
+  align-items: center;
+  gap: 30rpx;
+  margin-top: 50rpx;
+}
+.profile-header .header-inner .user-main .avatar-wrap.data-v-2f1ef635 {
+  width: 160rpx;
+  height: 160rpx;
+  position: relative;
+}
+.profile-header .header-inner .user-main .avatar-wrap .avatar.data-v-2f1ef635 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 6rpx solid rgba(255, 255, 255, 0.15);
+}
+.profile-header .header-inner .user-main .avatar-wrap .edit-badge.data-v-2f1ef635 {
+  position: absolute;
+  right: 4rpx;
+  bottom: 4rpx;
+  width: 40rpx;
+  height: 40rpx;
+  background: #28b389;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3rpx solid #121212;
+}
+.profile-header .header-inner .user-main .info.data-v-2f1ef635 {
+  flex: 1;
+}
+.profile-header .header-inner .user-main .info .name-row.data-v-2f1ef635 {
+  display: flex;
+  align-items: center;
+  gap: 12rpx;
+  margin-bottom: 16rpx;
+}
+.profile-header .header-inner .user-main .info .name-row .name.data-v-2f1ef635 {
+  color: #fff;
+  font-size: 44rpx;
+  font-weight: 800;
+  max-width: 300rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.profile-header .header-inner .user-main .info .name-row .level-tag.data-v-2f1ef635 {
+  font-size: 20rpx;
+  color: #ffd700;
+  background: rgba(255, 215, 0, 0.1);
+  border: 1px solid rgba(255, 215, 0, 0.4);
+  padding: 0 16rpx;
+  border-radius: 20rpx;
+  font-weight: 900;
+}
+.profile-header .header-inner .user-main .info .bio.data-v-2f1ef635 {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 24rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  width: 420rpx;
+}
+.main-body.data-v-2f1ef635 {
+  margin-top: -80rpx;
+  padding: 0 30rpx;
+  position: relative;
+  z-index: 10;
+}
+.data-card.data-v-2f1ef635 {
+  background: #fff;
+  border-radius: 40rpx;
+  height: 200rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10rpx 40rpx rgba(0, 0, 0, 0.05);
+  margin-bottom: 30rpx;
+}
+.data-card .item.data-v-2f1ef635 {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 12rpx;
+}
+.data-card .item .num.data-v-2f1ef635 {
+  font-size: 44rpx;
+  font-weight: 900;
+  color: #1a1a1a;
+}
+.data-card .item .label.data-v-2f1ef635 {
+  font-size: 24rpx;
+  color: #999;
+  font-weight: 500;
+}
+.data-card .line.data-v-2f1ef635 {
+  width: 2rpx;
+  height: 60rpx;
+  background: #f5f5f5;
+}
+.menu-box.data-v-2f1ef635 {
+  background: #fff;
+  border-radius: 40rpx;
+  overflow: hidden;
+  box-shadow: 0 4rpx 20rpx rgba(0, 0, 0, 0.02);
+}
+.menu-box .menu-item.data-v-2f1ef635 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40rpx 36rpx;
+  background: #fff;
+  border-bottom: 1rpx solid #f9f9f9;
+  width: 100%;
+  transition: all 0.2s;
+}
+.menu-box .menu-item.data-v-2f1ef635:active {
+  background: #fdfdfd;
+  transform: scale(0.995);
+}
+.menu-box .menu-item .left.data-v-2f1ef635 {
+  display: flex;
+  align-items: center;
+  gap: 28rpx;
+}
+.menu-box .menu-item .left text.data-v-2f1ef635 {
+  font-size: 30rpx;
+  color: #333;
+  font-weight: 700;
+}
+.menu-box .menu-item .m-icon.data-v-2f1ef635 {
+  width: 72rpx;
+  height: 72rpx;
+  border-radius: 24rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menu-box .menu-item .m-icon.icon-skin.data-v-2f1ef635 {
+  background: #667eea;
+}
+.menu-box .menu-item .m-icon.icon-clear.data-v-2f1ef635 {
+  background: #95a5a6;
+}
+.menu-box .menu-item .m-icon.icon-about.data-v-2f1ef635 {
+  background: #f39c12;
+}
+.menu-box .menu-item .m-icon.icon-share.data-v-2f1ef635 {
+  background: #2ecc71;
+}
+.menu-box .menu-item .m-icon.icon-wechat.data-v-2f1ef635 {
+  background: #07c160;
+}
+.menu-box .menu-item .m-icon.icon-logout.data-v-2f1ef635 {
+  background: #e74c3c;
+}
+.menu-box .menu-item .m-icon.icon-privacy.data-v-2f1ef635 {
+  background: #34495e;
+}
+.menu-box .menu-item .m-icon.icon-update.data-v-2f1ef635 {
+  background: #3498db;
+}
+.menu-box .menu-item .right-info.data-v-2f1ef635 {
+  display: flex;
+  align-items: center;
+  gap: 10rpx;
+}
+.menu-box .menu-item .v-tag.data-v-2f1ef635 {
+  font-size: 24rpx;
+  color: #bbb;
+  font-weight: 600;
+  margin-right: 4rpx;
+}
+.secondary-menu.data-v-2f1ef635 {
+  margin-top: 30rpx;
+}
+.action-buttons.data-v-2f1ef635 {
+  margin-top: 50rpx;
+  display: flex;
+  flex-direction: column;
+  gap: 30rpx;
+}
+.action-buttons button.data-v-2f1ef635 {
+  height: 110rpx;
+  border-radius: 40rpx;
+  font-size: 30rpx;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+.action-buttons button.data-v-2f1ef635::after {
+  display: none;
+}
+.action-buttons button.data-v-2f1ef635:active {
+  transform: scale(0.99);
+  opacity: 0.9;
+}
+.action-buttons .btn-wechat.data-v-2f1ef635 {
+  background: #07c160;
+  color: #fff;
+  gap: 12rpx;
+  box-shadow: 0 10rpx 30rpx rgba(7, 193, 96, 0.25);
+}
+.action-buttons .btn-logout.data-v-2f1ef635 {
+  background: #fff;
+  color: #ff4757;
+  box-shadow: 0 4rpx 20rpx rgba(0, 0, 0, 0.03);
+}
+.footer-info.data-v-2f1ef635 {
+  text-align: center;
+  padding: 100rpx 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12rpx;
+}
+.footer-info text.data-v-2f1ef635 {
+  font-size: 22rpx;
+  color: #eee;
+  letter-spacing: 4rpx;
+  font-weight: 800;
+  text-transform: uppercase;
+}
