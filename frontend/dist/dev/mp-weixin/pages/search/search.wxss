@@ -1,0 +1,128 @@
+.search-container.data-v-cdfa925e {
+  min-height: 100vh;
+  background: #fff;
+}
+.search-header.data-v-cdfa925e {
+  display: flex;
+  align-items: center;
+  padding: 20rpx 30rpx;
+  border-bottom: 1rpx solid #F5F5F5;
+}
+.search-bar.data-v-cdfa925e {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  background: #F5F5F5;
+  border-radius: 30rpx;
+  padding: 0 20rpx;
+  height: 70rpx;
+}
+.search-icon.data-v-cdfa925e {
+  font-size: 32rpx;
+  margin-right: 10rpx;
+}
+.search-input.data-v-cdfa925e {
+  flex: 1;
+  font-size: 28rpx;
+}
+.search-cancel.data-v-cdfa925e {
+  font-size: 28rpx;
+  color: #666;
+  margin-left: 20rpx;
+}
+.search-suggestions.data-v-cdfa925e {
+  padding: 20rpx 30rpx;
+  border-bottom: 1rpx solid #F5F5F5;
+}
+.suggestion-item.data-v-cdfa925e {
+  padding: 20rpx 0;
+  border-bottom: 1rpx solid #F5F5F5;
+}
+.suggestion-text.data-v-cdfa925e {
+  font-size: 28rpx;
+  color: #333;
+}
+.hot-search.data-v-cdfa925e,
+.search-history.data-v-cdfa925e {
+  padding: 30rpx;
+}
+.section-title.data-v-cdfa925e {
+  font-size: 28rpx;
+  font-weight: 600;
+  color: #333;
+  display: block;
+  margin-bottom: 20rpx;
+}
+.hot-tags.data-v-cdfa925e,
+.history-tags.data-v-cdfa925e {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15rpx;
+}
+.hot-tag.data-v-cdfa925e,
+.history-tag.data-v-cdfa925e {
+  font-size: 24rpx;
+  color: #666;
+  background: #F5F5F5;
+  padding: 12rpx 24rpx;
+  border-radius: 20rpx;
+}
+.history-header.data-v-cdfa925e {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20rpx;
+}
+.history-clear.data-v-cdfa925e {
+  font-size: 24rpx;
+  color: #28b389;
+}
+.search-results.data-v-cdfa925e {
+  height: calc(100vh - 200rpx);
+}
+.result-list.data-v-cdfa925e {
+  padding: 20rpx 30rpx;
+}
+.result-item.data-v-cdfa925e {
+  display: flex;
+  background: #fff;
+  border-radius: 8rpx;
+  margin-bottom: 20rpx;
+  overflow: hidden;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.08);
+}
+.result-image.data-v-cdfa925e {
+  width: 160rpx;
+  height: 160rpx;
+  flex-shrink: 0;
+}
+.result-info.data-v-cdfa925e {
+  flex: 1;
+  padding: 20rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.result-title.data-v-cdfa925e {
+  font-size: 28rpx;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 10rpx;
+}
+.result-meta.data-v-cdfa925e {
+  display: flex;
+  gap: 20rpx;
+}
+.result-score.data-v-cdfa925e,
+.result-download.data-v-cdfa925e {
+  font-size: 24rpx;
+  color: #666;
+}
+.loading-more.data-v-cdfa925e,
+.no-more.data-v-cdfa925e,
+.empty.data-v-cdfa925e {
+  text-align: center;
+  padding: 30rpx;
+  color: #999;
+  font-size: 24rpx;
+}

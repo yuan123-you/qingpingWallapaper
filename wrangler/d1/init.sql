@@ -2,6 +2,7 @@ CREATE TABLE IF NOT EXISTS wallpaper (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   class_id INTEGER NOT NULL,
   pic_url TEXT NOT NULL,
+  pic_base64 TEXT,
   title TEXT,
   tags TEXT,
   desc TEXT,
@@ -23,6 +24,7 @@ CREATE TABLE IF NOT EXISTS classify (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   name TEXT NOT NULL,
   cover_url TEXT NOT NULL,
+  cover_base64 TEXT,
   desc TEXT,
   sort INTEGER DEFAULT 0,
   wall_count INTEGER DEFAULT 0,
@@ -34,6 +36,7 @@ CREATE INDEX IF NOT EXISTS idx_classify_sort ON classify(sort);
 CREATE TABLE IF NOT EXISTS banner (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   pic_url TEXT NOT NULL,
+  pic_base64 TEXT,
   jump_url TEXT,
   sort INTEGER DEFAULT 0,
   status INTEGER DEFAULT 1,
@@ -79,4 +82,4 @@ CREATE TABLE IF NOT EXISTS admin (
 
 CREATE INDEX IF NOT EXISTS idx_admin_username ON admin(username);
 
-INSERT INTO admin (username, password) VALUES ('admin', 'admin123') ON CONFLICT(username) DO NOTHING;
+INSERT INTO admin (username, password) VALUES ('admin', '240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9') ON CONFLICT(username) DO NOTHING;

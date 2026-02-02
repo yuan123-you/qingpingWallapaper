@@ -1,0 +1,132 @@
+.search-container.data-v-c10c040c {
+  min-height: 100vh;
+  background: #fff;
+}
+.search-header.data-v-c10c040c {
+  display: flex;
+  align-items: center;
+  padding: 20rpx 30rpx;
+  border-bottom: 1rpx solid #F5F5F5;
+}
+.search-bar.data-v-c10c040c {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  background: #F5F5F5;
+  border-radius: 30rpx;
+  padding: 0 20rpx;
+  height: 70rpx;
+}
+.search-icon.data-v-c10c040c {
+  font-size: 32rpx;
+  margin-right: 10rpx;
+}
+.search-input.data-v-c10c040c {
+  flex: 1;
+  font-size: 28rpx;
+}
+.search-cancel.data-v-c10c040c {
+  font-size: 28rpx;
+  color: #666;
+  margin-left: 20rpx;
+}
+.search-suggestions.data-v-c10c040c {
+  padding: 20rpx 30rpx;
+  border-bottom: 1rpx solid #F5F5F5;
+}
+.suggestion-item.data-v-c10c040c {
+  padding: 20rpx 0;
+  border-bottom: 1rpx solid #F5F5F5;
+}
+.suggestion-text.data-v-c10c040c {
+  font-size: 28rpx;
+  color: #333;
+}
+.hot-search.data-v-c10c040c,
+.search-history.data-v-c10c040c {
+  padding: 30rpx;
+}
+.section-title.data-v-c10c040c {
+  font-size: 28rpx;
+  font-weight: 600;
+  color: #333;
+  display: block;
+  margin-bottom: 20rpx;
+}
+.hot-tags.data-v-c10c040c,
+.history-tags.data-v-c10c040c {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15rpx;
+}
+.hot-tag.data-v-c10c040c,
+.history-tag.data-v-c10c040c {
+  font-size: 24rpx;
+  color: #666;
+  background: #F5F5F5;
+  padding: 12rpx 24rpx;
+  border-radius: 20rpx;
+}
+.history-header.data-v-c10c040c {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20rpx;
+}
+.history-clear.data-v-c10c040c {
+  font-size: 24rpx;
+  color: #28b389;
+}
+.search-results.data-v-c10c040c {
+  height: calc(100vh - 200rpx);
+}
+.result-list.data-v-c10c040c {
+  padding: 20rpx 30rpx;
+}
+.result-item.data-v-c10c040c {
+  display: flex;
+  background: #fff;
+  border-radius: 8rpx;
+  margin-bottom: 20rpx;
+  overflow: hidden;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.08);
+}
+.result-image.data-v-c10c040c {
+  width: 160rpx;
+  height: 160rpx;
+  flex-shrink: 0;
+}
+.result-info.data-v-c10c040c {
+  flex: 1;
+  padding: 20rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.result-title.data-v-c10c040c {
+  font-size: 28rpx;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 10rpx;
+}
+.result-meta.data-v-c10c040c {
+  display: flex;
+  gap: 20rpx;
+}
+.result-score.data-v-c10c040c,
+.result-download.data-v-c10c040c {
+  font-size: 24rpx;
+  color: #666;
+}
+.loading-more.data-v-c10c040c,
+.no-more.data-v-c10c040c,
+.empty.data-v-c10c040c {
+  text-align: center;
+  padding: 30rpx;
+  color: #999;
+  font-size: 24rpx;
+}
+.safe-area-bottom.data-v-c10c040c {
+  height: constant(safe-area-inset-bottom);
+  height: env(safe-area-inset-bottom);
+}

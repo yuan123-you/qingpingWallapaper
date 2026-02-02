@@ -14,15 +14,12 @@ database_id = "633eb851-04f3-4a02-9b1e-6491e577c9d8"
 binding = "CACHE"
 id = "d3e6ffc9ae314ef89ec0c984999bd44b"
 
-[env.development]
-name = "qingping-wallpaper-api-dev"
-
-[[env.development.d1_databases]]
+[[d1_databases]]
 binding = "DB"
 database_name = "d1"
 database_id = "633eb851-04f3-4a02-9b1e-6491e577c9d8"
 
-[[env.development.kv_namespaces]]
+[[kv_namespaces]]
 binding = "CACHE"
 id = "d3e6ffc9ae314ef89ec0c984999bd44b"
 

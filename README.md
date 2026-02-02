@@ -1,185 +1,151 @@
-# 轻屏壁纸V2.0
+# 轻屏壁纸 V2.0
 
-基于uni-app和Cloudflare Wrangler的跨平台壁纸应用，支持微信小程序、H5和APP。
+基于UniApp和Cloudflare Wrangler的跨平台壁纸应用
 
 ## 项目结构
 
 ```
 qingpingWallapaper/
-├── admin/                     # 管理员后台
+├── frontend/          # UniApp前端项目（微信小程序）
+│   ├── api/         # API接口
+│   ├── components/  # 组件
+│   ├── pages/       # 页面
+│   ├── stores/      # 状态管理
+│   ├── utils/       # 工具函数
+│   ├── static/      # 静态资源
+│   ├── App.vue      # 应用入口
+│   ├── main.js      # 主文件
+│   ├── manifest.json # 应用配置
+│   ├── pages.json   # 页面配置
+│   ├── uni.scss     # 全局样式
+│   ├── package.json # 依赖配置
+│   └── vite.config.js # Vite配置
+├── backend/           # Vue3管理后台
 │   ├── src/
-│   │   ├── api/               # 后台接口封装
-│   │   ├── components/        # 后台通用组件
-│   │   ├── pages/             # 后台页面
-│   │   ├── stores/            # 状态管理
-│   │   ├── utils/             # 工具函数
+│   │   ├── api/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── router/
+│   │   ├── stores/
+│   │   ├── utils/
 │   │   ├── App.vue
 │   │   └── main.js
 │   ├── index.html
 │   ├── package.json
 │   └── vite.config.js
-├── api/                       # 前端接口封装
-│   ├── user/
-│   └── admin/
-├── common/                    # 公共资源
-│   ├── images/
-│   ├── style/
-│   └── constants/
-├── components/                # 通用组件
-│   ├── common-nav-bar/
-│   ├── wallpaper-card/
-│   └── rating-star/
-├── pages/                     # 用户端页面
-│   ├── index/
-│   ├── classify/
-│   ├── preview/
-│   ├── my/
-│   ├── search/
-│   └── notice/
-├── static/                    # 静态资源
-│   ├── images/
-│   └── tabBar/
-├── stores/                    # 状态管理
-│   └── user.js
-├── utils/                     # 工具函数
-│   ├── request.js
-│   ├── storage.js
-│   └── format.js
-├── wrangler/                  # Wrangler后端
-│   ├── src/
-│   │   ├── routes/            # 路由处理
-│   │   ├── db/                # 数据库操作
-│   │   ├── utils/             # 工具函数
-│   │   └── index.js           # 入口文件
-│   ├── d1/                    # 数据库迁移脚本
-│   └── wrangler.toml          # Wrangler配置
-├── App.vue
-├── main.js
-├── manifest.json
-├── pages.json
-├── package.json
-└── uni.scss
+├── wrangler/          # Cloudflare Worker API
+│   ├── d1/
+│   │   ├── add_admin.sql
+│   │   └── init.sql
+│   └── src/
+│       ├── routes/
+│       ├── index.js
+│       └── index-test.js
+├── API.md           # API文档
+├── README.md        # 项目说明
+└── wrangler.toml    # Wrangler配置
 ```
 
 ## 技术栈
 
-### 前端（用户端）
-- 框架：uni-app（Vue 3 Composition API）
-- 样式：SCSS
-- UI组件：uni-ui
-- 状态管理：Pinia
-- 网络请求：uni.request
+### 前端（frontend/）
+- **框架**: UniApp + Vue 3
+- **状态管理**: Pinia
+- **样式**: SCSS
+- **构建工具**: Vite
 
-### 管理员后台
-- 框架：Vue 3 + Vite
-- UI组件：Element Plus
-- 状态管理：Pinia
-- 网络请求：Axios
+### 后端（backend/）
+- **框架**: Vue 3 + Vite
+- **状态管理**: Pinia
+- **路由**: Vue Router
+- **UI组件**: Element Plus
 
-### 后端（Wrangler）
-- 服务运行时：Cloudflare Workers
-- 数据库：Cloudflare D1
-- 缓存层：Cloudflare KV
-- 接口规范：RESTful API
+### API（wrangler/）
+- **运行时**: Cloudflare Workers
+- **数据库**: D1 (SQLite)
+- **部署**: Wrangler CLI
 
-## 快速开始
+## 开发命令
 
-### 1. 安装依赖
+### 前端开发（UniApp微信小程序）
 
 ```bash
+cd frontend
 npm install
+npm run dev:mp-weixin    # 微信小程序开发
+npm run build:mp-weixin  # 微信小程序构建
+npm run dev:h5          # H5开发
+npm run build:h5         # H5构建
 ```
 
-### 2. 配置Wrangler
+### 后端开发（管理后台）
 
-1. 安装Wrangler CLI：
 ```bash
+cd backend
+npm install
+npm run dev             # 开发模式
+npm run build           # 生产构建
+npm run preview         # 预览构建结果
+```
+
+### API部署（Cloudflare Worker）
+
+```bash
+cd wrangler
 npm install -g wrangler
+wrangler deploy        # 部署到Cloudflare
+wrangler d1 execute DB --file=./d1/init.sql  # 初始化数据库
 ```
 
-2. 登录Cloudflare账号：
-```bash
-wrangler login
-```
+## 主要功能
 
-3. 创建D1数据库：
-```bash
-wrangler d1 create wallpaper-db
-```
+### 前端功能
+- 首页展示（轮播图、推荐、分类）
+- 分类浏览
+- 壁纸预览
+- 搜索功能
+- 用户收藏
+- 浏览历史
+- 下载保存
 
-4. 创建KV命名空间：
-```bash
-wrangler kv:namespace create "CACHE"
-```
+### 后台功能
+- 管理员登录
+- 壁纸管理（增删改查）
+- 分类管理
+- 轮播图管理
+- 公告管理
+- 数据统计
 
-5. 更新`wrangler.toml`中的配置，替换`your-database-id`和`your-kv-namespace-id`
+### API功能
+- 用户端API
+- 管理端API
+- 数据库操作
+- 图片上传（Cloudflare R2）
 
-6. 执行数据库迁移：
-```bash
-wrangler d1 execute wallpaper-db --file=./wrangler/d1/init.sql
-```
+## 环境要求
 
-7. 部署Workers：
-```bash
-wrangler deploy
-```
-
-### 3. 启动前端开发
-
-```bash
-npm run dev:mp-weixin
-```
-
-### 4. 启动管理员后台
-
-```bash
-cd admin
-npm install
-npm run dev
-```
-
-## 功能特性
-
-### 用户端
-- 首页：轮播图、公告、每日推荐、专题精选
-- 分类：分类浏览、筛选、搜索
-- 预览：壁纸预览、评分、收藏、下载、分享
-- 我的：用户信息、收藏列表、浏览历史、设置
-- 搜索：搜索联想、热门搜索、搜索历史
-
-### 管理员后台
-- 壁纸管理：新增、编辑、删除、上下架
-- 分类管理：新增、编辑、删除、排序
-- 轮播图管理：新增、编辑、删除、排序
-- 公告管理：新增、编辑、删除、发布
-- 数据统计：壁纸数量、下载量、用户行为统计
-
-## 部署说明
-
-### 微信小程序
-1. 在HBuilderX中打包为微信小程序代码
-2. 上传至微信公众平台审核发布
-
-### H5
-1. 运行`npm run build:h5`构建
-2. 部署至静态服务器或Cloudflare Pages
-
-### APP
-1. 在HBuilderX中打包为APP
-2. 发布至应用商店
-
-### 管理员后台
-1. 运行`npm run build`构建
-2. 部署至Cloudflare Pages或其他静态服务器
+- Node.js >= 16.x
+- npm >= 8.x
+- 微信开发者工具（用于小程序开发）
+- Wrangler CLI（用于API部署）
 
 ## 注意事项
 
-1. 首次使用需要在Cloudflare创建D1数据库和KV命名空间
-2. 管理员默认账号：admin / admin123
-3. 请及时修改管理员密码
-4. 图片建议使用CDN加速
-5. 免费版Wrangler有请求限制，请注意使用量
+1. **前端开发**：使用HBuilderX或VS Code + UniApp插件
+2. **后端开发**：使用VS Code + Volar插件
+3. **API部署**：需要Cloudflare账号和Wrangler CLI
+4. **数据库**：使用Cloudflare D1，首次部署需要执行初始化SQL
+
+## 项目特点
+
+- ✅ 前后端完全分离
+- ✅ 支持多端发布（微信小程序、H5、App）
+- ✅ 使用Pinia进行状态管理
+- ✅ API使用Cloudflare Workers，无需服务器
+- ✅ 数据库使用Cloudflare D1，免费额度充足
+- ✅ 图片存储使用Cloudflare R2，成本低廉
+- ✅ 响应式设计，适配各种屏幕尺寸
 
 ## 许可证
 
-MIT
+MIT License

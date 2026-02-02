@@ -1,0 +1,115 @@
+.my-container.data-v-2f1ef635 {
+  min-height: 100vh;
+  padding: 30rpx;
+}
+.user-info.data-v-2f1ef635 {
+  display: flex;
+  align-items: center;
+  padding: 40rpx 30rpx;
+  background: #fff;
+  border-radius: 16rpx;
+  margin-bottom: 30rpx;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.08);
+  position: relative;
+}
+.user-avatar.data-v-2f1ef635 {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  margin-right: 30rpx;
+  position: relative;
+  background: #f0f0f0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.avatar-image.data-v-2f1ef635 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.avatar-placeholder.data-v-2f1ef635 {
+  font-size: 60rpx;
+  color: #999;
+}
+.user-detail.data-v-2f1ef635 {
+  flex: 1;
+}
+.user-name.data-v-2f1ef635 {
+  font-size: 36rpx;
+  font-weight: 600;
+  color: #333;
+  display: block;
+  margin-bottom: 10rpx;
+}
+.user-id.data-v-2f1ef635 {
+  font-size: 24rpx;
+  color: #666;
+}
+.my-stats.data-v-2f1ef635 {
+  display: flex;
+  gap: 20rpx;
+  margin-bottom: 30rpx;
+}
+.stat-item.data-v-2f1ef635 {
+  flex: 1;
+  background: #fff;
+  border-radius: 16rpx;
+  padding: 30rpx;
+  text-align: center;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.08);
+}
+.stat-value.data-v-2f1ef635 {
+  font-size: 48rpx;
+  font-weight: 600;
+  color: #28b389;
+  display: block;
+  margin-bottom: 10rpx;
+}
+.stat-label.data-v-2f1ef635 {
+  font-size: 24rpx;
+  color: #666;
+}
+.my-menu.data-v-2f1ef635 {
+  background: #fff;
+  border-radius: 16rpx;
+  overflow: hidden;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.08);
+}
+.menu-item.data-v-2f1ef635 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30rpx;
+  border-bottom: 1rpx solid #F5F5F5;
+}
+.menu-item.data-v-2f1ef635:last-child {
+  border-bottom: none;
+}
+.menu-item-left.data-v-2f1ef635 {
+  display: flex;
+  align-items: center;
+  gap: 20rpx;
+}
+.menu-icon.data-v-2f1ef635 {
+  font-size: 40rpx;
+}
+.menu-title.data-v-2f1ef635 {
+  font-size: 28rpx;
+  color: #333;
+}
+.menu-arrow.data-v-2f1ef635 {
+  font-size: 40rpx;
+  color: #999;
+}
+.version-info.data-v-2f1ef635 {
+  text-align: center;
+  padding: 30rpx;
+  color: #999;
+  font-size: 24rpx;
+}
+.safe-area-bottom.data-v-2f1ef635 {
+  height: constant(safe-area-inset-bottom);
+  height: env(safe-area-inset-bottom);
+}
